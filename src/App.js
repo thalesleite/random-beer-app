@@ -7,7 +7,7 @@ import Footer from './components/Footer/Footer';
 import HomePage from './pages/Home/Home';
 import BreweryDetailsPage from './pages/BreweryDetails/BreweryDetails';
 
-import './App.css';
+import './App.scss';
 
 function App() {
   return (
