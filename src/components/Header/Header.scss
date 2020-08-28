@@ -1,0 +1,16 @@
+@import '../../scss/variables';
+
+.header {
+  height: 120px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  top: 0;
+  background-color: $color-gold;
+
+  @media only screen and (max-width: 600px)  {
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+  }
+}
