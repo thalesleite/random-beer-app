@@ -1,12 +1,13 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
 
+import { selectBeer } from '../../redux/beer/beer.selectors';
 import { Grid } from '@material-ui/core';
 
 import './BeerDetails.scss';
 
 function BeerDetails({ beer }) {
-    console.log(beer);
-
     return (
         <div>
           <section className="beer-details">
@@ -31,4 +32,8 @@ function BeerDetails({ beer }) {
     );
 }
 
-export default BeerDetails;
+const mapStateToProps = createStructuredSelector({
+  beer: selectBeer
+});
+
+export default connect(mapStateToProps)(BeerDetails);
