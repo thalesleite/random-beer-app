@@ -2,6 +2,21 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+.btn-beer {
+  width: 180px;
+  height: 50px;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  border: solid 3px $color-black !important;
+  color: $color-black !important;
+
+  &:hover {
+    border: solid 3px $color-gold !important;
+    color: $color-gold !important;
+    background-color: $color-black!important;
+  }
+}
+
 // HACKS
 .MuiGrid-spacing-xs-4 {
   //width: calc(100% + 32px);

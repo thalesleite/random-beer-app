@@ -1,3 +1,17 @@
+@import '../../scss/variables';
+
 .beer-details {
+  display: flex;
   padding: 20px;
+  justify-content: center;
+
+  &--box {
+    border: 1px solid $color-grey;
+    background-color: $color-grey-light;
+    padding: 15px;
+
+    h1 {
+      border-bottom: 1px solid $color-grey;
+    }
+  }
 }

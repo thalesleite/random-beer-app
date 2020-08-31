@@ -11,7 +11,7 @@ function RandomBeer() {
             <Grid container spacing={4}>
               <Grid item xs={12}>
                 <Button
-                    className=""
+                    className="btn-beer"
                     type="button"
                   >
                     Try another beer
