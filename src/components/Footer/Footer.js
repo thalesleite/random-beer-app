@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Grid } from '@material-ui/core';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 
 import './Footer.scss';
 
@@ -11,8 +11,8 @@ function Footer() {
 
   return (
     <footer className="footer">
-      <Grid container>
-        <Grid xs={12} md={12}>
+      <Grid container spacing={4}>
+        <Grid item xs={12}>
           <span>Copyright © {year} Random Beer App</span>
         </Grid>
       </Grid>

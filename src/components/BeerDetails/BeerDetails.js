@@ -4,21 +4,21 @@ import { Grid } from '@material-ui/core';
 
 import './BeerDetails.scss';
 
-function BeerDetails() {
+function BeerDetails({ beer }) {
+    console.log(beer);
+
     return (
         <div>
           <section className="beer-details">
             <Grid container spacing={4}>
-              <Grid item xs={7}>
+              <Grid item sm={5} xs={12}>
                 some picture
               </Grid>
-              <Grid item xs={5}>
-                <h1>Title</h1>
+              <Grid item sm={7} xs={12}>
+                <h1>{ beer?.name }</h1>
 
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, molestias error. 
-                  Recusandae cumque quam incidunt est odit quod earum delectus modi! Dignissimos, magni. 
-                  Consectetur a inventore impedit dolore quos saepe.
+                  { beer?.style?.description }
                 </p>
               </Grid>
             </Grid>

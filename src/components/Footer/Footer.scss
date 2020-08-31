@@ -1,12 +1,10 @@
 @import '../../scss/variables';
 
 .footer {
-  width: 100%;
   height: auto;
   padding: 15px;
   text-align: center;
   bottom: 0;
-  position: fixed;
   background-color: $color-black;
   color: white;
 }
