@@ -1,10 +1,26 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 import { Grid, Button } from '@material-ui/core';
 
+import { getRandomBeer } from '../../services/api';
+
+import { setBeer } from '../../redux/beer/beer.actions';
+
 import './RandomBeer.scss';
 
-function RandomBeer() {
+class RandomBeer extends Component {
+
+  async handleRandomBeer(event) {
+    event.preventDefault();
+
+    const { setBeer } = this.props;
+    const radomBeer = await getRandomBeer();
+
+    setBeer(radomBeer);
+  }
+
+  render() {
     return (
         <div>
           <section className="random-beer">
@@ -13,6 +29,7 @@ function RandomBeer() {
                 <Button
                     className="btn-beer"
                     type="button"
+                    onClick={event => { this.handleRandomBeer(event) }}
                   >
                     Try another beer
                 </Button>
@@ -21,6 +38,17 @@ function RandomBeer() {
           </section>
         </div>
     );
+  }
 }
 
-export default RandomBeer;
+const mapStateToProps = state => ({
+  beer: state.beer
+});
+
+const mapDispatchToProps = dispatch => {
+  return {
+    setBeer: beer => dispatch(setBeer(beer))
+  }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(RandomBeer);
