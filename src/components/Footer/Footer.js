@@ -11,8 +11,8 @@ function Footer() {
 
   return (
     <footer className="footer">
-      <Grid container spacing={3}>
-        <Grid item xs={12} md={12}>
+      <Grid container>
+        <Grid xs={12} md={12}>
           <span>Copyright © {year} Random Beer App</span>
         </Grid>
       </Grid>

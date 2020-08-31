@@ -1,11 +1,24 @@
 import React from 'react';
 
+import { Grid, Button } from '@material-ui/core';
+
 import './RandomBeer.scss';
 
 function RandomBeer() {
     return (
         <div>
-          RandomBeer
+          <section className="random-beer">
+            <Grid container spacing={4}>
+              <Grid item xs={12}>
+                <Button
+                    className=""
+                    type="button"
+                  >
+                    Try another beer
+                </Button>
+              </Grid>
+            </Grid>
+          </section>
         </div>
     );
 }
