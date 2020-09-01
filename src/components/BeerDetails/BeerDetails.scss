@@ -8,7 +8,11 @@
   &--box {
     border: 1px solid $color-grey;
     background-color: $color-grey-light;
-    padding: 15px;
+    padding: 10px;
+
+    img {
+      width: 100%;
+    }
 
     h1 {
       border-bottom: 1px solid $color-grey;

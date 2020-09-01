@@ -31,7 +31,7 @@ class RandomBeer extends Component {
                     type="button"
                     onClick={event => { this.handleRandomBeer(event) }}
                   >
-                    Try another beer
+                    get another beer
                 </Button>
               </Grid>
             </Grid>

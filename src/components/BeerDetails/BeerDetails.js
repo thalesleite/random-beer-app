@@ -14,7 +14,7 @@ function BeerDetails({ beer }) {
             <Grid container spacing={4}>
               <Grid item sm={5} xs={12}>
                 <div className="beer-details--box">
-                 some picture
+                 <img src={beer?.labels?.large} alt=""/>
                 </div>
               </Grid>
               <Grid item sm={7} xs={12}>
