@@ -5,11 +5,11 @@ import BeerDetails from '../../components/BeerDetails/BeerDetails';
 
 import './Home.scss';
 
-function Home({ beer }) {
+function Home() {
     return (
         <div className="container">
           <RandomBeer />
-          <BeerDetails beer={beer} />
+          <BeerDetails />
         </div>
     );
 }

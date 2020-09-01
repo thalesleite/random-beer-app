@@ -17,6 +17,34 @@ body {
   }
 }
 
+.details {
+  display: flex;
+  padding: 20px;
+  justify-content: center;
+
+  &--box {
+    border: 1px solid $color-grey;
+    background-color: $color-grey-light;
+    padding: 10px;
+
+    img {
+      width: 100%;
+    }
+
+    .bottom-line {
+      border-bottom: 1px solid $color-grey;
+    }
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  .hide {
+    display: none;
+  }
+}
+
 .btn-beer {
   width: 180px;
   height: 50px;
@@ -32,8 +60,17 @@ body {
   }
 }
 
+.loader {
+  text-align: center;
+  font-size: 30px;
+}
+
 // HACKS
 .MuiGrid-spacing-xs-4 {
   //width: calc(100% + 32px);
   width: 100% !important;
+}
+
+.MuiCircularProgress-colorPrimary {
+  color: $color-gold !important;
 }

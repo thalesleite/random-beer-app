@@ -7,21 +7,24 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 
 import HomePage from './pages/Home/Home';
-import BreweryDetailsPage from './pages/BreweryDetails/BreweryDetails';
+import DetailsPage from './pages/Details/Details';
 
 import { getRandomBeer } from './services/api';
 
 import { setBeer } from './redux/beer/beer.actions';
+import { setLoading } from './redux/loading/loading.actions';
 
 import './App.scss';
 
 class App extends React.Component {
 
   async componentDidMount() {
-    const { setBeer } = this.props;
+    const { setBeer, setLoading } = this.props;
+    setLoading(true);
     const radomBeer = await getRandomBeer();
 
-    setBeer(radomBeer);
+    await setBeer(radomBeer);
+    setLoading(false);
   }
 
   render() {
@@ -30,7 +33,7 @@ class App extends React.Component {
         <Header />
           <Switch>
             <Route exact path='/' component={HomePage} />
-            <Route path='/brewery-details' component={BreweryDetailsPage} />
+            <Route path='/brewery-details' component={DetailsPage} />
           </Switch>
         <Footer />
       </Router>
@@ -38,14 +41,15 @@ class App extends React.Component {
   }
 }
 
-const mapStateToProps = state => ({
-  beer: state.beer
-});
+// const mapStateToProps = state => ({
+//   beer: state.beer
+// });
 
 const mapDispatchToProps = dispatch => {
   return {
-    setBeer: beer => dispatch(setBeer(beer))
+    setBeer: beer => dispatch(setBeer(beer)),
+    setLoading: loading => dispatch(setLoading(loading))
   }
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(null, mapDispatchToProps)(App);
