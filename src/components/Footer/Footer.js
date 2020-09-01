@@ -13,7 +13,7 @@ function Footer() {
     <footer className="footer">
       <Grid container spacing={4}>
         <Grid item xs={12}>
-          <span>Copyright © {year} Random Beer</span>
+          <span>Copyright © {year} The Random Beer</span>
         </Grid>
       </Grid>
     </footer>

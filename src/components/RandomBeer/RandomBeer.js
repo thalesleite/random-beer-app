@@ -26,12 +26,13 @@ class RandomBeer extends Component {
           <section className="random-beer">
             <Grid container spacing={4}>
               <Grid item xs={12}>
+                <p>Click below to get a beer:</p>
                 <Button
                     className="btn-beer"
                     type="button"
                     onClick={event => { this.handleRandomBeer(event) }}
                   >
-                    get another beer
+                    random beer
                 </Button>
               </Grid>
             </Grid>
