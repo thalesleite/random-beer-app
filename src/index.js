@@ -1,6 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
+import regeneratorRuntime from 'regenerator-runtime';
+
 import './index.scss';
+
 import App from './App';
 
 import { Provider } from 'react-redux';

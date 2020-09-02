@@ -7,7 +7,7 @@ import './Home.scss';
 
 function Home() {
     return (
-        <div className="container">
+        <div>
           <RandomBeer />
           <BeerDetails />
         </div>

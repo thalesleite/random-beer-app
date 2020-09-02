@@ -31,19 +31,17 @@ class App extends React.Component {
     return (
       <Router>
         <Header />
-          <Switch>
-            <Route exact path='/' component={HomePage} />
-            <Route path='/brewery-details' component={DetailsPage} />
-          </Switch>
+          <div className="container">
+            <Switch>
+              <Route exact path='/' component={HomePage} />
+              <Route path='/brewery-details' component={DetailsPage} />
+            </Switch>
+          </div>
         <Footer />
       </Router>
     );
   }
 }
-
-// const mapStateToProps = state => ({
-//   beer: state.beer
-// });
 
 const mapDispatchToProps = dispatch => {
   return {
