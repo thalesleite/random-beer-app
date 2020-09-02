@@ -8,13 +8,13 @@ This is a web application to show random beers and its breweries.
 - Fisrt clone the project.
 
 - Run the code below to install all the dependencies:
-    npm install
+    **npm install**
 
 - Run for start the project(Production Mode):
-    npm run build
+    **npm run build**
 
 - Run for start the project(Development Mode):
-    npm run start
+    **npm run start**
 
 
 ## Built With:
