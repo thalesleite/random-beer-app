@@ -1,10 +1,10 @@
-The Random Beer App
+# The Random Beer App
 This is a web application to show random beers and its breweries.
 
-Prerequisites
+## Prerequisites
 - NodeJS( https://nodejs.org/ ) installed;
 
-Installing
+## Installing
 - Fisrt clone the project.
 
 - Run the code below to install all the dependencies:
@@ -17,15 +17,15 @@ Installing
     npm run start
 
 
-Built With:
+## Built With:
 - ReactJS
 - SASS
 - Material-ui
 - Webpack
 - Babel
 
-Versioning:
+## Versioning:
 It was used git for versioning.
 
-Author:
+## Author:
 Thales Leite - Front-end Developer
